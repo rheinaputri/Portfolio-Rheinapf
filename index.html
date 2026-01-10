@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-language="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rheina Putri - Web Developer & Graphic Designer Portfolio">
+    <meta name="keywords" content="web developer, graphic designer, portfolio, frontend">
+    <meta name="author" content="Rheina Putri">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
+    <title>Rheina Putri | Portfolio</title>
+    
+    <style>
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top: 3px solid #9d4edd;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Logo di kiri -->
+            <a class="navbar-brand" href="#home">
+                <span class="logo">RePort</span>
+            </a>
+            
+            <!-- Menu toggle untuk mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            
+            <!-- Menu di kanan -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Language & Theme Toggle di kanan -->
+                <div class="navbar-controls">
+                    <button id="languageToggle" class="control-btn" title="Switch Language">
+                        <i class="fas fa-globe"></i>
+                        <span class="lang-text" data-i18n="lang.en">EN</span>
+                    </button>
+                    
+                    <button id="themeToggle" class="control-btn" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <span data-i18n="hero.greeting">Halo, saya</span><br>
+                            <span class="gradient-text">Rheina Putri</span>
+                        </h1>
+                        
+                        <div class="job-title">
+                            <span class="typed-text" data-i18n="hero.job">Web Developer & Designer</span>
+                        </div>
+                        
+                        <!-- Availability Badge dengan warna hijau -->
+                        <div class="availability">
+                            <span class="dot"></span>
+                            <span data-i18n="hero.available">Tersedia untuk bekerja</span>
+                        </div>
+                        
+                        <p class="hero-description" data-i18n="hero.description">
+                            Menciptakan solusi digital yang elegan dengan fokus pada pengalaman pengguna dan desain modern.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">
+                                Lihat Proyek
+                            </a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="hero.contactMe">
+                                Hubungi Saya
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <div class="gradient-border"></div>
+                            <img src="img/profil.png" alt="Rheina Putri" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="about.title">Tentang <span class="gradient-text">Saya</span></h2>
+                <p class="section-subtitle" data-i18n="about.subtitle">Sekilas tentang perjalanan saya</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="img/about.jpg" alt="About" class="img-fluid">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <h3 data-i18n="about.heading">Membuat Pengalaman Digital</h3>
+                        <p data-i18n="about.text1">
+                            Dengan pengalaman 2+ tahun dalam pengembangan web dan desain, saya mengkhususkan diri dalam membuat produk digital yang bersih, fungsional, dan mudah digunakan.
+                        </p>
+                        <p data-i18n="about.text2">
+                            Pendekatan saya menggabungkan keahlian teknis dengan pemikiran kreatif untuk memberikan solusi yang tidak hanya terlihat bagus tetapi juga berkinerja luar biasa.
+                        </p>
+                        
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.experience">Pengalaman</span>
+                                <span class="info-value">2+ Tahun</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.projects">Proyek</span>
+                                <span class="info-value">15+ Selesai</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="about.location">Lokasi</span>
+                                <span class="info-value">Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="skills.title">Keahlian <span class="gradient-text">Teknis</span></h2>
+                <p class="section-subtitle" data-i18n="skills.subtitle">Teknologi yang saya kuasai</p>
+            </div>
+            
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h4>JavaScript</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h4>React</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h4>PHP</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                    <h4>Laravel</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h4>Python</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>MySQL</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h4>Figma</h4>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h4>Git</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="projects.title">Proyek <span class="gradient-text">Unggulan</span></h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Pilihan karya terbaik</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-image">
+                        <img src="img/traveloke.jpeg" alt="Traveloke">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="https://github.com/yourusername/traveloke" target="_blank" class="view-code-btn">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.traveloke.title">Traveloke</h3>
+                        <p data-i18n="projects.traveloke.desc">Platform pemesanan travel modern dengan UI/UX intuitif</p>
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>React</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="img/project2.jpg" alt="E-commerce">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="https://github.com/yourusername/shopeasy" target="_blank" class="view-code-btn">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.ecommerce.title">ShopEasy</h3>
+                        <p data-i18n="projects.ecommerce.desc">Dashboard e-commerce dengan analitik lengkap</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="img/project3.jpg" alt="Fitness App">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="https://github.com/yourusername/fittrack" target="_blank" class="view-code-btn">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-i18n="projects.fitness.title">FitTrack</h3>
+                        <p data-i18n="projects.fitness.desc">Aplikasi mobile pelacak kebugaran dan nutrisi</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-i18n="contact.title">Hubungi <span class="gradient-text">Saya</span></h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Mari bekerja sama</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 data-i18n="contact.email">Email</h4>
+                                    <p>hello@rheinaputri.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 data-i18n="contact.phone">Telepon</h4>
+                                    <p>+62 812 3456 7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 data-i18n="contact.location">Lokasi</h4>
+                                    <p>Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://dribbble.com/yourusername" target="_blank" class="social-icon">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="https://instagram.com/yourusername" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>RePort</h3>
+                </div>
+                <p class="footer-text" data-i18n="footer.text">
+                    Menciptakan pengalaman digital yang bermakna
+                </p>
+                <div class="footer-bottom">
+                    <p>&copy; <span id="currentYear"></span> Rheina Putri. <span data-i18n="footer.rights">Hak cipta dilindungi</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Typed.js
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('.typed-text', {
+                strings: ['Web Developer', 'UI/UX Designer', 'Full Stack Developer'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true
+            });
+            
+            // Remove preloader
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.getElementById('preloader').style.opacity = '0';
+                    setTimeout(function() {
+                        document.getElementById('preloader').style.display = 'none';
+                    }, 500);
+                }, 800);
+            });
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
