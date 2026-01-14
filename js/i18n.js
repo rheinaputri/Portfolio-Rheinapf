@@ -35,11 +35,14 @@ const translations = {
 
     "projects.ecommerce.title": "UI UX Mobile Apps SmartFarm",
     "projects.ecommerce.desc":
-      "A mobile app interface designed to help farmers monitor, manage, and optimize farming activities digitally and efficiently.",
+      "Mobile app interface designed to assist and optimize farming activities digitally and efficiently.",
 
     "projects.tracer.title": "Tracer Study Polinema",
     "projects.tracer.desc":
-      "A system to track and evaluate graduates of Politeknik Negeri Malang after graduation in relation to employment and educational relevance.",
+      "A system to track and evaluate Politeknik Negeri Malang alumni regarding the workforce and education relevance.",
+
+      "projects.port.title": "Website Portfolio",
+      "projects.port.desc": "My Personal Portfolio Website with interactive and modern look",
 
     // Contact
     "contact.title": "Get In Touch",
@@ -92,11 +95,14 @@ const translations = {
 
     "projects.ecommerce.title": "UI UX Mobile Apps SmartFarm",
     "projects.ecommerce.desc":
-      "Antarmuka aplikasi mobile yang dirancang untuk membantu petani memantau, mengelola, dan mengoptimalkan aktivitas pertanian secara digital dan efisien.",
+      "Antarmuka aplikasi mobile yang dirancang untuk membantu dan mengoptimalkan aktivitas pertanian secara digital danefisien.",
 
     "projects.tracer.title": "Tracer Study Polinema",
     "projects.tracer.desc":
-      "Sistem untuk melacak dan mengevaluasi lulusan Politeknik Negeri Malang setelah lulus terkait dunia kerja dan relevansi pendidikan.",
+      "Sistem untuk melacak dan mengevaluasi alumnni Politeknik Negeri Malang terkait dunia kerja dan relevansi pendidikan.",
+
+      "projects.port.title": "Website Portfolio",
+      "projects.port.desc": "Website Portfolio Personalku dengan tampilan interaktif dan modern",
 
     // Contact
     "contact.title": "Hubungi Saya",
