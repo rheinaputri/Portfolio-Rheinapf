@@ -196,13 +196,14 @@ h1 {
 .navbar-nav .nav-link.active::after {
     width: 20px;
 }
+
 .navbar-toggler {
-  border: none;
-  padding: 0px;
+    border: none;
+    padding: 0px;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2348c4df' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2348c4df' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-toggler:focus {
@@ -1163,25 +1164,26 @@ section::before {
 
 /* ===== PROJECTS SLIDER (ALL DEVICES) ===== */
 .projects-grid {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 16px;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
 }
 
 .projects-grid::-webkit-scrollbar {
-  height: 6px;
+    height: 6px;
 }
 
 .projects-grid::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .project-card {
-  flex: 0 0 calc(33.333% - 16px); /* 3 card kelihatan di desktop */
-  scroll-snap-align: start;
+    flex: 0 0 calc(33.333% - 16px);
+    /* 3 card kelihatan di desktop */
+    scroll-snap-align: start;
 }
 
 .project-content {
@@ -1484,22 +1486,24 @@ section::before {
    RESPONSIVE DESIGN
 ========================== */
 .hello-text {
-  font-family: 'Poppins', sans-serif;
-  font-size: 4rem; /* DESKTOP */
-  font-weight: 700;
-  color: white;
-  margin-bottom: 30px;
-  text-align: center;
-  min-height: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    /* DESKTOP */
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    min-height: 100px;
 }
 
 /* ===== PRELOADER MOBILE ===== */
 @media (max-width: 768px) {
-  .hello-text {
-    font-size: 1.8rem;   /* lebih kecil di HP */
-    min-height: 50px;
-    margin-bottom: 20px;
-  }
+    .hello-text {
+        font-size: 1.8rem;
+        /* lebih kecil di HP */
+        min-height: 50px;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -1664,8 +1668,9 @@ section::before {
     .hero-image {
         padding-top: 100px;
     }
-    
+
 }
+
 @media (max-width: 768px) {
     .hero-grid {
         display: grid;
@@ -1699,7 +1704,8 @@ section::before {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.4rem; /* lebih gede dari desktop */
+        font-size: 2.4rem;
+        /* lebih gede dari desktop */
         line-height: 1.2;
     }
 }
@@ -1711,21 +1717,21 @@ section::before {
 }
 
 /* ===== PROJECTS MOBILE SLIDER ===== */
+/*  */
+
 @media (max-width: 768px) {
-  .projects-grid {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 10px;
-  }
+    .project-card {
+        flex: 0 0 100%;
+        /* 🔥 tampil 1 penuh */
+    }
 
-  .projects-grid::-webkit-scrollbar {
-    display: none; /* hilangin scrollbar */
-  }
+    .projects-grid {
+        gap: 16px;
+        padding-bottom: 10px;
+    }
 
-  .project-card {
-    flex: 0 0 calc(100% / 1.3); /* kira-kira 3 card muat */
-    scroll-snap-align: start;
-  }
+    .projects-grid::-webkit-scrollbar {
+        display: none;
+        /* lebih clean di HP */
+    }
 }
