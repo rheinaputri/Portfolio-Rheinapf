@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         // Navbar background on scroll
         if (window.scrollY > 50) {
-            navbar.style.padding = '15px 0';
+            navbar.style.padding = '12px 0';
             navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
         } else {
-            navbar.style.padding = '20px 0';
-            navbar.style.boxShadow = 'none';
+            navbar.style.padding = '15px 0';
+            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
         }
         
         // Active nav link based on scroll
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 60,
+                    value: 40,
                     density: {
                         enable: true,
                         value_area: 800
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     type: "circle"
                 },
                 opacity: {
-                    value: 0.3,
+                    value: 0.5,
                     random: true
                 },
                 size: {
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 line_linked: {
                     enable: true,
-                    distance: 100,
+                    distance: 150,
                     color: "#9d4edd",
                     opacity: 0.2,
                     width: 1
@@ -152,11 +152,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.transform = 'translateY(-10px)';
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+            this.style.transform = 'translateY(0)';
         });
     });
     
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: targetElement.offsetTop - 70,
                     behavior: 'smooth'
                 });
                 
@@ -188,25 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ====================
-    // ANIMATE SKILL BARS
-    // ====================
-    const skillBars = document.querySelectorAll('.skill-progress');
-    
-    function animateSkillBars() {
-        skillBars.forEach(bar => {
-            const position = bar.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.3;
-            
-            if (position < screenPosition) {
-                bar.style.width = bar.style.width;
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', animateSkillBars);
-    animateSkillBars(); // Initial check
-    
-    // ====================
     // HERO IMAGE ANIMATION
     // ====================
     const heroImage = document.querySelector('.profile-img');
@@ -214,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.5;
-            heroImage.style.transform = `translateY(${rate}px)`;
+            heroImage.style.transform = `translateY(${rate}px) scale(1)`;
         });
     }
 });
